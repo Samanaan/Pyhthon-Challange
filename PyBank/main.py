@@ -44,7 +44,7 @@ greatestIncrease = max(changesOverPeriods)
 greatestDecrease = min(changesOverPeriods)
 
 # the average of the changes per period
-averageChange = sum(changesOverPeriods) / len(changesOverPeriods)
+averageChange = round(sum(changesOverPeriods) / len(changesOverPeriods),2)
 
 # This can be paired down later
 greatestIncreaseIndex = changesOverPeriods.index(greatestIncrease)
@@ -56,13 +56,13 @@ greatestDecreaseDate = listofmonths [greatestDecreaseIndex + 1]
 
 #________________________________________________________
 # Print out stats for the user
-print("Financial Analysis")
-print("____________________________")
-print("Total Months: " + str(numOfMonths)) #Print num of months
-print("Total: $" + str(sumOfProfitLoss)) # Print
-print("Average Change: $" + str(averageChange))
-print("Greatest Increase in Profits: " + greatestIncreaseDate + " (" + str(greatestIncrease)+ ")")
-print("Greatest Decrease in Profits: " + greatestDecreaseDate + " (" + str(greatestDecrease)+ ")")
+print("\nFinancial Analysis\n")
+print("____________________________\n")
+print("Total Months: " + str(numOfMonths)+ "\n") #Print num of months
+print("Total: $" + str(sumOfProfitLoss)+ "\n") # Print
+print("Average Change: $" + str(averageChange)+ "\n")
+print("Greatest Increase in Profits: " + greatestIncreaseDate + " ($" + str(greatestIncrease)+ ")\n")
+print("Greatest Decrease in Profits: " + greatestDecreaseDate + " ($" + str(greatestDecrease)+ ")\n")
 #________________________________________________________
 #Create the .csv file for later analysis
 
